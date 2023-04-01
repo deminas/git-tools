@@ -57,6 +57,7 @@ namespace GitTools
 
         private static IServiceCollection ConfigureServices(this IServiceCollection services)
         {
+            services.AddSingleton(services);
             services.AddSingleton<AppConfig>();
 
             services.RegisterAllByBaseType<BaseTransientCore>();
